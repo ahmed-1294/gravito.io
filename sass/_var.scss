@@ -1,0 +1,60 @@
+$primaryFont: "Aeonik","Helvetica";
+
+$buttonColor: #ff4010;
+
+@mixin display{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+
+
+    @media (max-width:766px) {
+        h1{
+            font-size: 48px;
+            line-height: 52px;
+        }
+
+        h2{
+            font-size: 32px;
+            line-height: 36px;
+        }
+
+        h3{
+            font-size: 28px ;
+            line-height: 1.3em;
+        }
+
+        p{
+            font-size: 14px;
+            line-height: 1.2em;
+        }
+    }
+
+   
+    
+}
+
+@mixin mobileresponsive{
+    @media (max-width:766px) {
+        
+        flex-direction: column;
+        padding: 0 15px;
+        width: 100%;
+    }
+}
+
+@mixin button{
+    border: none;
+    background-color: #ff4010;
+    font-family: $primaryFont;
+    font-size: 15px;
+    padding: 15px 0px;
+    border-radius: 12px;
+    @include display();
+    gap: 10px;
+
+    i{
+        margin-left: 5px;
+    }
+}
